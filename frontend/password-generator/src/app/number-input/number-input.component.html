@@ -1,0 +1,14 @@
+<div>
+  <input
+    type="number"
+    min="1"
+    max="10"
+    [(ngModel)]="numberInput"
+    (ngModelChange)="validateNumber()"
+    required
+  />
+  <button (click)="getPasswords()">Generate</button>
+  <div *ngFor="let password of passwords">
+    {{ password }}
+  </div>
+</div>
